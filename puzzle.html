@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="puzzle.css">
-    <title>Image puzzle</title>    <!-- added title -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="puzzle.css">
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"
+    integrity="sha256-h0cGsrExGgcZtSZ/fRz4AwV+Nn6Urh/3v3jFRQ0w9dQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"
+    integrity="sha256-4JY5MVcEmAVSuS6q4h9mrwCm6KNx91f3awsSQgwu0qc=" crossorigin="anonymous"></script>
+  <script src="puzzle.js"></script>
+  <link href=“https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css” rel=“stylesheet”>
+  <script src=“https://code.jquery.com/jquery-1.10.2.js”></script>
+  <script src=“https://code.jquery.com/ui/1.10.4/jquery-ui.js”></script>
+  <title>Image puzzle</title> <!-- added title -->
 </head>
+
 <body>
-    <div class="puzzle"></div>
+  <h1>Image Puzzle Game</h1>
+  <hr>
+  <div id="Rules">
+    <button:on-click></button:on-click>
+    <strong>Instructions to play</strong>
+  </div>
+  <div id="playArea">
+    <div class="container">
+      <div class="puzzle p1"></div>
+      <div class="puzzle p3"></div>
+    </div>
+
+    <div class="container">
+      <div class="puzzle p2"></div>
+      <div class="puzzle p4"></div>
+    </div>
+  </div>
+  <div class="fullImage"></div>
+
+
+
 </body>
+
 </html>

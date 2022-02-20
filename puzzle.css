@@ -1,5 +1,56 @@
-.puzzle {
-  background-image: url("images/earth\(7000\).jpeg");
+body {
+  background-color: rgb(180, 161, 170);
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+}
+
+h1{
+  text-align: center;
+}
+.fullImage{
+  background-image: url("images/pokeman.png");
+  width: 400px;
+  height: 400px;
+  display: block;
+  margin: 1px auto;
+
+
+}
+#playArea{
+  width: 400px;
+  height: 400px;
+}
+
+.puzzle{
+  background-image: url("images/pokeman.png");
   width: 200px;
   height: 200px;
+  border: 1px solid black;
+  border-right: 0px;
+  cursor: move;
+
+}
+.p1{
+  background-position:0px 0px ;
+  border-bottom: 0px;
+  
+}
+.p2{
+  background-position:0px 200px ;
+  border-bottom: 0px;
+  
+  
+}
+.p3{
+  background-position:200px 0px ;
+  
+}
+.p4{
+  background-position:200px 200px ;
+  
+}
+
+.container{
+  display: inline-block;
+  margin-right: -4px;
 }
