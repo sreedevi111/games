@@ -16,44 +16,60 @@ h1{
 
 
 }
+
+
+
+
 #playArea{
   width: 400px;
   height: 400px;
+  position: relative;
 }
 
 .puzzle{
-  background-image: url("images/pokeman.png");
+  /* background-image: url("images/pokeman.png"); */
   width: 200px;
   height: 200px;
   border: 1px solid black;
-  border-right: 0px;
   cursor: move;
+  top: 200px;
+  line-height: 200px;
+  position: absolute;
+  
 
 }
 .p1{
   background-position:0px 0px ;
-  border-bottom: 0px;
+  top:0px;
+  left:0px;
+  background-image: url("images/pokeman.png");
   
 }
 .p2{
   background-position:0px 200px ;
-  border-bottom: 0px;
+  top:0px;
+  left:200px;
+  background-image: url("images/pokeman.png");
   
   
 }
 .p3{
   background-position:200px 0px ;
+  top:200px;
+  left:0px;
+  background-image: url("images/pokeman.png");
   
 }
 .p4{
   background-position:200px 200px ;
+  top:200px;
+  left:200px;
+  background-image: url("images/pokeman.png");
   
 }
 
-.container{
-  display: inline-block;
-  margin-right: -4px;
-}
+
+
 
 #btnRule{
   text-align: center;
