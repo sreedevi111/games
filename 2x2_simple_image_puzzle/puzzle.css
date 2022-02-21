@@ -27,7 +27,7 @@ h1{
 }
 
 .puzzle{
-  /* background-image: url("images/pokeman.png"); */
+  
   width: 200px;
   height: 200px;
   border: 1px solid black;
@@ -42,7 +42,7 @@ h1{
   background-position:0px 0px ;
   top:0px;
   left:0px;
-  background-image: url("images/pokeman.png");
+  background-image: url("./images/pokeman.png");
   
 }
 .p2{
