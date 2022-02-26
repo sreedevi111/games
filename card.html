@@ -1,14 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
 <head>
-    <meta charset="UTF-8">
-<link rel="stylesheet" href="card.css">
-
-    <title>Card game</title>
+    <title>Blackjack Game</title>
+    <link rel="stylesheet" href="card.css">
+    <script> src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" </script>
 </head>
-
-
 <body>
-    <h2></h2>
+<!--defining main area -->
+<div id="main-content" class="conatiner">
+    <h2>
+        <span id="result">..Welcome to Blackjack World... </span>
+    </h2>
+<!--    row1 with player area-->
+    <div class="row1" >
+        <div id="Player-box">
+            <h2 id="player">You: <span id="Player-result">0</span></h2>
+        </div>
+        <div id ="Dealer-box">
+            <h2 id="player">Dealer: <span id="Dealer-result">0</span></h2>
+        </div>
+    </div>
+<!--    defining button-->
+    <div class="row2">
+        <div>
+            <button id="play-button>">Play</button>
+            <button id="stand-button>">Stand</button>
+            <button id="reset-button>">Reset</button>
+        </div>
+    </div>
+<!--    defining status-->
+    <div class="row3">
+        <table>
+            <tr>
+                <th>Wins</th>
+                <th>Losses</th>
+                <th>Draws</th>
+            </tr>
+            <tr>
+                <td><span id="wins">0</span></td>
+                <td><span id="loses">0</span></td>
+                <td><span id="draws">0</span></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<script src ="card.js"></script>
+
 </body>
 </html>
