@@ -69,11 +69,15 @@ body{
     border: 3px solid #e3cdcd;
     height: 180px !important;
     width: 120px !important;
-    margin-right: 4px;
+    margin: auto;
+    /*margin-right: 4px;*/
     border-radius: 15px;
     text-align: left !important;
     font-size: 30px;
     display: inline-block;
+    /*justify-content: space-around;*/
+    /*flex-wrap: wrap;*/
+    gap: 2px;
     background-color: white;
     color: #eee3e3;
     padding: 4px;
@@ -128,35 +132,35 @@ th{
 
 
 
-/*@media (min-width: 800px) and (max-width: 1024px) {*/
+@media (min-width: 800px) and (max-width: 1024px) {
 
-/*    #result, #player {*/
-/*        font-size: 27px;*/
-/*    }*/
-/*    .row1 div {*/
-/*        height: 400px;*/
-/*        padding: 5px;*/
-/*    }*/
+    #result, #player {
+        font-size: 27px;
+    }
+    .row1 div {
+        height: 400px;
+        padding: 5px;
+    }
 
-/*    .card{*/
-/*        height: 120px !important;*/
-/*        width: 80px !important;*/
-/*        font-size: 25px;*/
-/*        box-shadow: 4px 6px rgb(227, 211, 211);*/
-/*    }*/
-/*    #suites{*/
-/*        font-size: 40px;*/
-/*    }*/
-/*    table, th, td {*/
-/*        height: 60px;*/
-/*        width: 600px;*/
+    .card{
+        height: 120px !important;
+        width: 80px !important;
+        font-size: 25px;
+        box-shadow: 4px 6px rgb(227, 211, 211);
+    }
+    #suites{
+        font-size: 40px;
+    }
+    table, th, td {
+        height: 60px;
+        width: 600px;
 
-/*    }*/
-/*    #hitButton, #standButton, #dealButton {*/
-/*        font-size: 17px;*/
+    }
+    #hitButton, #standButton, #dealButton {
+        font-size: 17px;
 
-/*    }*/
-/*}*/
+    }
+}
 
 @media (min-width: 350px) and (max-width: 800px) {
 

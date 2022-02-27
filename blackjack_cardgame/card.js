@@ -259,18 +259,18 @@ function showResult(winner) {
         document.querySelector("#result").style.color = messageColor;
     }
 }
-// let alertOnce = false;
-// // function to alert rotate device when the webpage is opened in smaller devices
-// let limitFunc = function () {
-//     if (window.innerWidth <= 1000 && alertOnce === false) {
-//         alert("Rotate Device.");
-//         alertOnce = true;
-//     }
-//
-//
-// }
-// window.addEventListener("resize", limitFunc);  //window size os resized=>event
-// window.addEventListener("onload", limitFunc);
+let alertOnce = false;
+// function to alert rotate device when the webpage is opened in smaller devices
+let limitFunc = function () {
+    if (window.innerWidth <= 1000 && alertOnce === false) {
+        alert("Rotate Device.");
+        alertOnce = true;
+    }
+
+
+}
+window.addEventListener("resize", limitFunc);  //window size os resized=>event
+window.addEventListener("onload", limitFunc);
 
 function rules() {
     alert("The goal of blackjack is to beat the dealer's hand without going over 21.\n" +
