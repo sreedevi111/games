@@ -9,7 +9,7 @@ $(document).ready(function () {
     var mainCanvas = $("#playArea");
 
 
-    expected = ["1", "2", "3", "4"];
+    // expected = ["1", "2", "3", "4"];
 
     puzzle.draggable({
         containment: mainCanvas,

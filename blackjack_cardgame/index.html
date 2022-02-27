@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>Blackjack game</title>
+    <link rel="stylesheet" href="card.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@latest/dist/fireworks.js"></script>
+<!--    <script src="dist/fireworks.js"></script>-->
+
+
+</head>
+
+<body>
+<div id="main-content" class="container">
+    <div class="fire"></div>
+    <h2>
+        <span id="result">...Blackjack World....</span>
+    </h2>
+    <div class="row1">
+        <div id="Player-Box">
+            <h2 id="player">You : <span id="Player-Result">0</span></h2>
+        </div>
+        <div id="Dealer-Box">
+            <h2 id="dealer">Dealer : <span id="Dealer-Result">0</span></h2>
+        </div>
+    </div>
+    <div class="row2">
+        <div>
+            <button id="playButton">Play</button>
+            <button id="standButton">Stand</button>
+            <button id="resetButton">Reset</button>
+            <button id="rules" onclick="rules()">Rules</button>
+
+        </div>
+    </div>
+    <div class="row3">
+        <table>
+            <tr>
+                <th>Wins</th>
+                <th>Losses</th>
+                <th>Draws</th>
+            </tr>
+            <tr>
+                <td><span id="wins">0</span></td>
+                <td><span id="losses">0</span></td>
+                <td><span id="draws" >0</span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+
+<script src="card.js"></script>
+
+
+</html>
