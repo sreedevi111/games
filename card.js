@@ -1,5 +1,5 @@
 
-const container = document.querySelector("#main-content")
+const container = document.querySelector(".fire")
 const fireworks = new Fireworks(container, {
     rocketsPoint: 50,
     hue: { min: 0, max: 360 },
