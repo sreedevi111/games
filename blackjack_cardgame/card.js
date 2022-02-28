@@ -69,7 +69,7 @@ let blackjackGame = {                           //defining blackjackGame as obje
         K: 10,
         A: [1, 11],                     //cards with face value
     },
-    suites: ["♠", "♦", "♣", "♥"],       //suites with 4 symbol
+    suites: ["&#9824", "&#9670", "&#9827", "&#9829"],       //suites with 4 symbol
     wins: 0,
     losses: 0,
     draws: 0,
@@ -107,7 +107,7 @@ function showCard(card, activePlayer) {
         for (let i = 0; i < objkeys.length; i++) {              //objkeys.length=13
             if (objkeys[i] == card) {
                 if(randomIndexSuit==0 || randomIndexSuit==2){
-                    cardImage.innerHTML = card + `<div id=suites style="color:black">${singleSuit}</div>`;          //???
+                    cardImage.innerHTML = card + `<div id=suites style="color:black">${singleSuit}</div>`;      // add card with color
                     cardImage.style.color="black";
                 }
                 else{
@@ -126,8 +126,8 @@ function showCard(card, activePlayer) {
 
 //function to add the score of displayed cards
 function updateScore(card, activePlayer) {
-    if (card === "A") {
-        if ((activePlayer["score"] + blackjackGame["cardMap"][card][1]) <= 21) {
+    if (card === "A") {                                                                 //taking value of A
+        if ((activePlayer["score"] + blackjackGame["cardMap"][card][1]) <= 21) {        //if sum is less than 21, A with 11 takes
             activePlayer["score"] += blackjackGame["cardMap"][card][1];
         } else {
             activePlayer["score"] += blackjackGame["cardMap"][card][0];
@@ -158,6 +158,7 @@ function blackjackDeal() {
     for (var i = 0; i < yourImages.length; i++) {
         yourImages[i].remove();
     }
+    fireworks.stop();
     YOU["score"] = 0;
     document.querySelector("#Player-Result").textContent = 0;
     document.querySelector("#Player-Result").style.color = "#ffffff";
@@ -261,14 +262,14 @@ function showResult(winner) {
 }
 let alertOnce = false;
 // function to alert rotate device when the webpage is opened in smaller devices
-let limitFunc = function () {
-    if (window.innerWidth <= 1000 && alertOnce === false) {
-        alert("Rotate Device.");
-        alertOnce = true;
-    }
-
-
-}
+// let limitFunc = function () {
+//     if (window.innerWidth <= 1000 && alertOnce === false) {
+//         alert("Rotate Device.");
+//         alertOnce = true;
+//     }
+//
+//
+// }
 window.addEventListener("resize", limitFunc);  //window size os resized=>event
 window.addEventListener("onload", limitFunc);
 
