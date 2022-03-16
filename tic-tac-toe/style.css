@@ -1,112 +1,50 @@
-*{
-    background: rgb(105, 94, 94);
+*, *::after, *::before{
     box-sizing: border-box;
 }
 
-h1{
-    font-size: 60px;
-    text-align: center;
-    color: rgb(142, 185, 156);
-    margin-top: 10px;
-}
-body{
-    display: flex;
-    flex-wrap: wrap;
+:root{
+    --cell-size:100px;
+    --mark-size: cal(var(var(--cell-size)*.9))
+    
 }
 
-p{
-    text-align: center;
-    font-size: medium;
-    color: aquamarine;
-}
+ body{
+    margin: 0px;
+} 
 
-.grid{
-    background-color: rgb(142, 185, 156);
+ .board{
+    width: 100vw;
+    height: 100vh;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
-    grid-gap: 10px;
-    margin-top: 100px;
-}
-
-.box{
-    background: black;
-    display: flex;
     justify-content: center;
+    align-content: center;
+    justify-items: center;
     align-items: center;
-    cursor: pointer;
-    height: 130px;
-    width: 130px;
+    grid-template-columns: repeat(3,auto);
 }
 
-.box:hover{
-    background-color: rgb(13, 49, 59);
-    opacity: 1;
+.cell{
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid black;
+} 
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3){
+    border-top: none;
 }
 
-.reset{
-    color: black;
-    background-color: lightskyblue;
-    border: 1px solid aqua;
-    padding-top: 10px;
-    padding-left: 38px;
-    width: 140px;
-    height: 40px;
-    border-radius: 25px;
-    cursor: pointer;
-    position: fixed;
-    margin-top: 800px;
-    margin-left: 0px;
-    display: block;
-    font-size: 17px;
- }
- 
- .reset:hover{
-     background-color: aqua;
- }
- .player{
-     position: fixed;
-     color: rgb(92, 184, 226);
-     font-size: 50px;
-     margin-top: 450px;
-     margin-left: 1000px;
-     
- }
- 
- .player span{
-     color:  rgb(229, 235, 240);
- }
- 
- 
- .X::after{
-     content: 'X';
-     font-size: 100px;
-     color: rgb(92, 184, 226);
- }
- 
- .O::after{
-     content: 'O';
-     color: rgb(229, 235, 240);
-     font-size: 110px;
- }
- 
- .won::after{
-     animation-name: win;
-     animation-duration:1s;
-    
- }
- 
- @keyframes win{
-     0%{color:  black;}
-     10%{color: lightblue;}
-     20%{color: black;}
-     30%{color: lightblue}
-     40%{color: black}
-     50%{color: black;}
-     60%{color: lightblue;}
-     70%{color: black;}
-     80%{color: lightblue}
-     100%{color:black}
- }
+.cell:nth-child(3n+1){
+    border-left: none;
+}
 
-    
+.cell:nth-child(3n){
+    border-right: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9){
+    border-bottom: none;
+}
