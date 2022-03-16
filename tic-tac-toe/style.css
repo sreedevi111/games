@@ -1,0 +1,21 @@
+*{
+    background: rgb(7, 7, 7);
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 60px;
+    text-align: center;
+    color: rgb(142, 185, 156);
+    margin-top: 10px;
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+p{
+    text-align: center;
+    font-size: medium;
+    color: aquamarine;
+}
