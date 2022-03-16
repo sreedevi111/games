@@ -54,7 +54,10 @@
     border-bottom: none;
 }
 
-
+.cell.x,
+.cell.circle{
+    cursor: not-allowed;
+}
 
 .cell.x::before,
 .cell.x::after{
