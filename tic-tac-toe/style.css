@@ -4,12 +4,12 @@
 
 :root{
     --cell-size:100px;
-    --mark-size: cal(var(var(--cell-size)*.9))
+    --mark-size: calc(var(--cell-size)*.9);
     
 }
 
  body{
-    margin: 0px;
+    margin: 0;
 } 
 
  .board{
@@ -27,6 +27,9 @@
     width: var(--cell-size);
     height: var(--cell-size);
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 } 
 
 .cell:first-child,
@@ -39,12 +42,28 @@
     border-left: none;
 }
 
-.cell:nth-child(3n){
+.cell:nth-child(3n+3){
     border-right: none;
 }
 
 .cell:nth-child(7),
 .cell:nth-child(8),
-.cell:nth-child(9){
+.cell:last-child{
     border-bottom: none;
+}
+
+.cell.x::before,
+.cell.x::after{
+    content: '';
+    width: calc(var(--mark-size)*.15);
+    height: var(--mark-size);
+    background-color: black;
+
+}
+
+.cell.x::before{
+    transform: rotate(45deg);
+}
+.cell.cell.x::after{
+    transform: rotate(-45deg);
 }
