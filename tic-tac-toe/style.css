@@ -30,6 +30,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    cursor: pointer;
 } 
 
 .cell:first-child,
@@ -52,6 +54,8 @@
     border-bottom: none;
 }
 
+
+
 .cell.x::before,
 .cell.x::after{
     content: '';
@@ -67,4 +71,26 @@
 }
 .cell.cell.x::after{
     transform: rotate(-45deg);
+}
+
+.cell.circle::before,
+.cell.circle::after{
+    content: '';
+    position: absolute;
+    width: var(--mark-size);
+    height: var(--mark-size);
+    background-color: black;
+    border-radius: 50%;
+
+}
+
+.cell.cell.circle::before{
+    width: var(--mark-size);
+    height: var(--mark-size);
+}
+
+.cell.cell.circle::after{
+    width: calc(var(--mark-size)*.7);
+    height: calc(var(--mark-size)*.7);
+    background-color: white;
 }
