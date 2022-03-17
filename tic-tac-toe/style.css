@@ -59,52 +59,89 @@
     cursor: not-allowed;
 }
 /* To add hover effects */
-.board.x .cell:hover{
+.cell.x::before,
+.cell.x::after,
+.cell.circle::before {
+  background-color: black;
+}
 
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after,
+.board.circle .cell:not(.x):not(.circle):hover::before {
+  background-color: lightgrey;
 }
 
 .cell.x::before,
 .cell.x::after,
-.board.x .cell:not(.x):not(.circle):hover::before
-.board.x .cell:hover::after
-{
-    content: '';
-    position: absolute;
-    width: calc(var(--mark-size)*.15);
-    height: var(--mark-size);
-    background-color: black;
-
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after {
+  content: '';
+  position: absolute;
+  width: calc(var(--mark-size) * .15);
+  height: var(--mark-size);
 }
 
 .cell.x::before,
-.board.x .cell:hover::before
-{
-    transform: rotate(45deg);
+.board.x .cell:not(.x):not(.circle):hover::before {
+  transform: rotate(45deg);
 }
+
 .cell.x::after,
-.board.x .cell:hover::after
-{
-    transform: rotate(-45deg);
+.board.x .cell:not(.x):not(.circle):hover::after {
+  transform: rotate(-45deg);
 }
 
 .cell.circle::before,
-.cell.circle::after{
-    content: '';
-    position: absolute;
-    width: var(--mark-size);
-    height: var(--mark-size);
-    background-color: black;
-    border-radius: 50%;
-
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
 }
 
-.cell.circle::before{
-    width: var(--mark-size);
-    height: var(--mark-size);
+.cell.circle::before,
+.board.circle .cell:not(.x):not(.circle):hover::before {
+  width: var(--mark-size);
+  height: var(--mark-size);
 }
 
-.cell.circle::after{
-    width: calc(var(--mark-size)*.7);
-    height: calc(var(--mark-size)*.7);
-    background-color: white;
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::after {
+  width: calc(var(--mark-size) * .7);
+  height: calc(var(--mark-size) * .7);
+  background-color: white;
+}
+
+.winning-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .9);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 5rem;
+  flex-direction: column;
+}
+
+.winning-message button {
+  font-size: 3rem;
+  background-color: white;
+  border: 1px solid black;
+  padding: .25em .5em;
+  cursor: pointer;
+}
+
+.winning-message button:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.winning-message.show {
+  display: flex;
 }
